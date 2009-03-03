@@ -1,10 +1,12 @@
 <?php  
 /**
- * Zip Compression Class
+ *  Zip Compression Class
  *
  *	Based on Code Igniter ZIP Library 
  * 	http://codeigniter.com/user_guide/libraries/zip.html
  */
+
+
 class DPLS_Zip  {
 
 	var $zipdata 	= '';
@@ -13,8 +15,8 @@ class DPLS_Zip  {
 	var $file_num 	= 0;
 	var $offset		= 0;
 
-	function DPLS_Zip()
-	{
+	function DPLS_Zip(){
+		
 		//log_message('debug', "Zip Compression Class Initialized");
 	}
 
@@ -29,12 +31,11 @@ class DPLS_Zip  {
 	 * @param	mixed	the directory name. Can be string or array
 	 * @return	void
 	 */
-	function add_dir($directory)
-	{
-		foreach ((array)$directory as $dir)
-		{
-			if ( ! preg_match("|.+/$|", $dir))
-			{
+	function add_dir($directory){
+		
+		foreach ((array)$directory as $dir){
+			
+			if ( ! preg_match("|.+/$|", $dir)){
 				$dir .= '/';
 			}
 
@@ -51,8 +52,8 @@ class DPLS_Zip  {
 	 * @param	string	the directory name
 	 * @return	void
 	 */
-	function _add_dir($dir)
-	{
+	function _add_dir($dir){
+		
 		$dir = str_replace("\\", "/", $dir);
 
 		$this->zipdata .=
@@ -100,17 +101,15 @@ class DPLS_Zip  {
 	 * @param	string
 	 * @return	void
 	 */	
-	function add_data($filepath, $data = NULL)
-	{
-		if (is_array($filepath))
-		{
-			foreach ($filepath as $path => $data)
-			{
+	function add_data($filepath, $data = NULL){
+		if (is_array($filepath)){
+			
+			foreach ($filepath as $path => $data){
+			
 				$this->_add_data($path, $data);
 			}
-		}
-		else
-		{
+		}else{
+			
 			$this->_add_data($filepath, $data);
 		}
 	}
