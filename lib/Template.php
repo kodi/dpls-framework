@@ -2,9 +2,9 @@
 class DPLS_Template{
 	
 	
-	public function assign ($name='', $value='' )
-	{
-		$this->var[$name]=$value;
+	public function assign ($name='', $value='' ){
+		$name='v_'.$name;
+		$this->$name=$value;
 	}
 	
 	function show($templateName){

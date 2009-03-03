@@ -15,7 +15,7 @@ define('DEBUG',true);
 define('DEFAULT_ACTION','defaultAction');
 
 session_start();
-error_reporting(E_ERROR);
+error_reporting(E_ALL);
 
 //DATABASE CONFIG
 define('DB_Database','pdfbase');
