@@ -18,7 +18,7 @@ session_start();
 error_reporting(E_ALL);
 
 //DATABASE CONFIG
-define('DB_Database','pdfbase');
+define('DB_Database','pdfbase'); 
 define('DB_User','root');
 define('DB_Pass','');
 define('DB_Server','127.0.0.1');
