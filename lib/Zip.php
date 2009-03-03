@@ -1,5 +1,4 @@
 <?php  
-
 /**
  * Zip Compression Class
  *
